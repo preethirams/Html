@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
     
@@ -6,23 +5,20 @@
     <style>
         table {
             border: 2px solid black;
-            
             width: 20%;
         }
         td {
             border: 2px solid black;
-          
             text-transform: uppercase;
         }
         th {
             font-weight: bold;
             border: 2px solid black;
-           
             text-transform: uppercase;
         } 
     </style>
     <script>
-        function validateStock() {
+        function validate() {
             var quantity = document.forms['stock']['qty'].value;
             quantity = parseInt(quantity);
             if(quantity < 10 || quantity > 100 || quantity % 10 !== 0)
@@ -56,15 +52,15 @@
     </table>
 </div>
 <div>
-    <form name="stock" onsubmit="validateStock()">
+    <form name="stock" onsubmit="validate()">
         <h1>Stock Trading</h1>
         <table style="border: 0;">
             <tr>
-                <td style="border: 0;  text-transform: capitalize;">Ticker:</td>
-                <td style="border: 0; text-transform: uppercase;"><input type="text" name="ticker"></input></td>
+                <td style="border: 0;  ">Ticker:</td>
+                <td style="border: 0; "><input type="text" name="ticker"></input></td>
             </tr>
             <tr>
-                <td style="border: 0;  text-transform: capitalize;">Quantity:</td>
+                <td style="border: 0; ">Quantity:</td>
                 <td style="border: 0;"><input type="text" name="qty"></input></td>
             </tr>
             <tr style="height: 12pt;"></tr>
