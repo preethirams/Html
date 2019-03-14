@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
 	<title>T20 Match</title>
@@ -15,14 +15,13 @@ var ctx = c.getContext( "2d");
 ctx.font = "15px Times New Roman";
 ctx.lineWidth = 1.5;
 ctx.strokeText("Runs",0,20);
-
 ctx.strokeText("210 -",0,70);
 ctx.strokeText("180 -",0,120);
 ctx.strokeText("150 -",0,170);
 ctx.strokeText("120 -",0,220);
-ctx.strokeText("60   -",0,270);
-ctx.strokeText("30   -",0,320);
-ctx.strokeText("0     -",0,370);
+ctx.strokeText(" 60 -",0,270);
+ctx.strokeText(" 30 -",0,320);
+ctx.strokeText("  0 -",0,370);
 ctx.moveTo(30,400);
 ctx.lineTo(30,0);
 ctx.moveTo(0,370);
@@ -34,13 +33,11 @@ ctx.strokeText("|",230,380);
 ctx.strokeText("10",230,395);
 ctx.strokeText("|",330,380);
 ctx.strokeText("15",330,395);
-
 ctx.strokeText("Overs",435,385);
-ctx.moveTo(130, 303); //(5,40)
-ctx.lineTo(230, 245); //(10,75)
+ctx.moveTo(130, 303); 
+ctx.lineTo(230, 245);
 ctx.moveTo(230, 245);
-ctx.lineTo(330, 187); //(15,140)
-
+ctx.lineTo(330, 187); 
 ctx.stroke();
 </script>
 </body>
