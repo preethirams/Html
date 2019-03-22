@@ -1,8 +1,6 @@
-<!DOCTYPE html>
 <html>
 <head>
     <title>Xena Events</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         body {
             background-color: #DBC50A;
@@ -10,9 +8,6 @@
 			border: 2px solid White;
 			padding: 1cm;
 			border-radius: 20px;
-        }
-        input {
-            text-transform: uppercase;
         }
         table {
             width: 60%;
@@ -26,10 +21,10 @@
             if(!name.match(/^[A-Za-z]+$/)) {
 				alert("Name:\t* CHARACTERS ONLY");
 			}
-            if(parseInt(age) < 18) {
-                alert("Age:\t* EQUAL OR GREATER THAN 18");
+            if(age < 18) {
+                alert("Age Should be EQUAL TO OR GREATER THAN 18");
             }
-            if(!email.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+            if(email.checkValidity()) {
                 alert("Email ID:\t* INVALID EMAIL ID");
             }
         }
@@ -43,15 +38,15 @@
             <table>
                 <tr>
                     <td>Name:</td>
-                    <td><input type="text" name="name"></td>
+                    <td><input type="text" name="name" required></td>
                 </tr>
                 <tr>
                     <td>Age:</td>
-                    <td><input type="text" name="age"></td>
+                    <td><input type="number"min="18" name="age"></td>
                 </tr>
                 <tr>
                     <td>Email ID:</td>
-                    <td><input type="text" name="email"></td>
+                    <td><input type="email" name="email"></td>
                 </tr>
                 <tr>
                     <td>City:</td>
