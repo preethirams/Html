@@ -17,14 +17,7 @@
             text-transform: uppercase;
         } 
     </style>
-    <script>
-        function validate() {
-            var quantity = document.forms['stock']['qty'].value;
-            quantity = parseInt(quantity);
-            if(quantity < 10 || quantity > 100 || quantity % 10 !== 0)
-                alert("INVALID QUANTITY");
-        }
-    </script>
+    
 </head>
 <body style="margin: 0.5in;">
 <div>
@@ -57,11 +50,17 @@
         <table style="border: 0;">
             <tr>
                 <td style="border: 0;  ">Ticker:</td>
-                <td style="border: 0; "><input type="text" name="ticker"></input></td>
+                <td style="border: 0; "><input list="Tick" id="ticker-choice"  name="ticker">
+		<datalist id="Tick">
+                            <option value="Wipro">
+                            <option value="Infy">
+                            <option value="TCS">
+			    <option value="Techm">
+                        </datalist></td>
             </tr>
             <tr>
                 <td style="border: 0; ">Quantity:</td>
-                <td style="border: 0;"><input type="text" name="qty"></input></td>
+                <td style="border: 0;"><input type="number" min="10" max="100" step="10"name="qty"></td>
             </tr>
             <tr style="height: 12pt;"></tr>
             <tr>
